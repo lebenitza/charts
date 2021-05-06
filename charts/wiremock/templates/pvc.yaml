@@ -1,0 +1,22 @@
+{{- if .Values.persistence.enabled }}
+{{- if not .Values.persistence.persistentVolumeClaim.existingClaim }}
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ include "wiremock.fullname" . }}
+  labels:
+    {{- include "wiremock.labels" . | nindent 4 }}
+  {{- if eq .Values.persistence.resourcePolicy "keep" }}
+  annotations:
+    helm.sh/resource-policy: keep
+  {{- end }}
+spec:
+  accessModes:
+    - {{ .Values.persistence.persistentVolumeClaim.accessMode }}
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: {{ .Values.persistence.persistentVolumeClaim.size }}
+  storageClassName: {{ .Values.persistence.persistentVolumeClaim.storageClass | quote }}
+{{- end }}
+{{- end }}
