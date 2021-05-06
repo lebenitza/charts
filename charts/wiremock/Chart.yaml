@@ -3,7 +3,7 @@ name: wiremock
 description: A Helm chart for Wiremock
 
 type: application
-version: 0.2.0
+version: 0.3.0
 appVersion: "2.27.2"
 
 icon: http://wiremock.org/images/wiremock-concept-icon-01.png
