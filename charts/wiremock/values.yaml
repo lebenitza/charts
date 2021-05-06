@@ -95,7 +95,7 @@ persistence:
       ## Specify the "storageClass" used to provision the volume.
       ## Set it to "-" to disable dynamic provisioning
       ##
-      storageClass: 'standard'
+      storageClass: ''
       subPath: ''
       accessMode: ReadWriteOnce
       size: 10Gi
