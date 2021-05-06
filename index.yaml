@@ -42,6 +42,26 @@ entries:
   wiremock:
   - apiVersion: v2
     appVersion: 2.27.2
+    created: "2021-05-06T09:16:56.751939581Z"
+    description: A Helm chart for Wiremock
+    digest: c799b08ee823963c327e6896d9c0a0b6be896f86db3216c7a088582a6ee8cddd
+    home: http://wiremock.org/
+    icon: http://wiremock.org/images/wiremock-concept-icon-01.png
+    keywords:
+    - wiremock
+    - api-mock
+    - mocking
+    name: wiremock
+    sources:
+    - https://github.com/tomakehurst/wiremock
+    - https://github.com/rodolpheche/wiremock-docker
+    - https://github.com/lebenitza/charts
+    type: application
+    urls:
+    - https://github.com/lebenitza/charts/releases/download/wiremock-0.2.0/wiremock-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 2.27.2
     created: "2021-05-06T07:38:48.84914769Z"
     description: A Helm chart for Wiremock
     digest: d82910485afdd538b376510c2857052a3bbe631e1dc4ad1ba1f2dbe9de622493
@@ -60,4 +80,4 @@ entries:
     urls:
     - https://github.com/lebenitza/charts/releases/download/wiremock-0.1.0/wiremock-0.1.0.tgz
     version: 0.1.0
-generated: "2021-05-06T07:38:48.849160391Z"
+generated: "2021-05-06T09:16:56.751983982Z"
