@@ -2,6 +2,25 @@ apiVersion: v1
 entries:
   elasticsearch-curator:
   - apiVersion: v2
+    appVersion: 5.8.4
+    created: "2021-05-06T06:50:09.778063446Z"
+    description: A Helm chart for Elasticsearch Curator
+    digest: 5202924f5b790c549bd9421e2b98f062e6f6b7b672ede4cc70cabb614cea8788
+    home: https://github.com/elastic/curator
+    icon: https://helm.elastic.co/icons/elasticsearch.png
+    keywords:
+    - curator
+    - elasticsearch
+    - elasticsearch-curator
+    name: elasticsearch-curator
+    sources:
+    - https://github.com/lebenitza/helm-elasticsearch-curator
+    - https://github.com/bitnami/bitnami-docker-elasticsearch-curator
+    type: application
+    urls:
+    - https://github.com/lebenitza/charts/releases/download/elasticsearch-curator-3.0.2/elasticsearch-curator-3.0.2.tgz
+    version: 3.0.2
+  - apiVersion: v2
     appVersion: 5.8.3
     created: "2021-03-19T10:40:14.382804756Z"
     description: A Helm chart for Elasticsearch Curator
@@ -20,4 +39,4 @@ entries:
     urls:
     - https://github.com/lebenitza/charts/releases/download/elasticsearch-curator-3.0.1/elasticsearch-curator-3.0.1.tgz
     version: 3.0.1
-generated: "2021-03-19T10:40:14.382811757Z"
+generated: "2021-05-06T06:50:09.778071946Z"
