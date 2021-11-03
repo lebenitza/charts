@@ -84,7 +84,7 @@ spec:
                 {{ end }}
               {{ if .Values.command }}
               command:
-                {{ toYaml .Values.command | indent 16 }}
+                {{ toYaml .Values.command }}
               {{- end }}
               {{- if .Values.dryrun }}
               args: [ "--dry-run", "--config", "/etc/es-curator/config.yml", "/etc/es-curator/action_file.yml" ]
@@ -94,34 +94,34 @@ spec:
               env:
               {{- if .Values.envFromSecrets }}
                 {{- range $key,$value := .Values.envFromSecrets }}
-                - name: {{ $key | upper | quote}}
+                - name: {{ $key | upper | quote }}
                   valueFrom:
                     secretKeyRef:
-                      name: {{ $value.from.secret | quote}}
-                      key: {{ $value.from.key | quote}}
+                      name: {{ $value.from.secret | quote }}
+                      key: {{ $value.from.key | quote }}
                 {{- end }}
               {{- end }}
               {{- if .Values.env }}
-              {{- range $key,$value := .Values.env }}
-              - name: {{ $key | upper | quote}}
-                value: {{ $value | quote}}
-              {{- end }}
+               {{- range $key,$value := .Values.env }}
+                - name: {{ $key | upper | quote }}
+                  value: {{ $value | quote }}
+                {{- end }}
               {{- end }}
               resources:
-                {{ toYaml .Values.resources | nindent 16 }}
+                {{ toYaml .Values.resources }}
           {{- with .Values.nodeSelector }}
           nodeSelector:
-            {{ toYaml . | nindent 12 }}
+            {{ toYaml . }}
           {{- end }}
           {{- with .Values.affinity }}
           affinity:
-            {{ toYaml . | nindent 12 }}
+            {{ toYaml . }}
           {{- end }}
           {{- with .Values.tolerations }}
           tolerations:
-            {{ toYaml . | nindent 12 }}
+            {{ toYaml . }}
           {{- end }}
           {{- with .Values.securityContext }}
           securityContext:
-            {{ toYaml . | nindent 12 }}
+            {{ toYaml . }}
           {{- end }}
