@@ -79,6 +79,7 @@ their default values.
 | `psp.create`                         | Create pod security policy resources                        | `false`                                      |
 | `serviceAccount.create`              | Create a default serviceaccount for elasticsearch curator   | `true`                                       |
 | `serviceAccount.name`                | Name for elasticsearch curator serviceaccount               | `""`                                         |
+| `serviceAccount.annotations`         | Annotations to add to the curator serviceaccount            | {}                                           |
 
 
 Specify each parameter using the `--set key=value[,key=value]` argument to
