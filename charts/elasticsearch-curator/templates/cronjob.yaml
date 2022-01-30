@@ -87,7 +87,7 @@ spec:
                 {{ end }}
               {{ if .Values.command }}
               command:
-                {{ toYaml .Values.command | indent 16 }}
+                {{- toYaml .Values.command | nindent 16 }}
               {{- end }}
               {{- if .Values.dryrun }}
               args: [ "--dry-run", "--config", "/etc/es-curator/config.yml", "/etc/es-curator/action_file.yml" ]
@@ -103,15 +103,16 @@ spec:
                       name: {{ $value.from.secret | quote}}
                       key: {{ $value.from.key | quote}}
                 {{- end }}
-              {{- end }}
-              {{- if .Values.env }}
-              {{- range $key,$value := .Values.env }}
-              - name: {{ $key | upper | quote}}
-                value: {{ $value | quote}}
-              {{- end }}
+              {{- else if .Values.env }}
+                {{- range $key,$value := .Values.env }}
+                - name: {{ $key | upper | quote}}
+                  value: {{ $value | quote}}
+                {{- end }}
+              {{- else }}
+                []  
               {{- end }}
               resources:
-                {{ toYaml .Values.resources | nindent 16 }}
+                {{- toYaml .Values.resources | nindent 16 }}
           {{- with .Values.nodeSelector }}
           nodeSelector:
             {{ toYaml . | nindent 12 }}

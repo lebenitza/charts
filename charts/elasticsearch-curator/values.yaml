@@ -48,6 +48,7 @@ dryrun: false
 
 command: ["curator"]
 env: {}
+envFromSecrets: {}
 
 configMaps:
   # Delete indices older than 7 days

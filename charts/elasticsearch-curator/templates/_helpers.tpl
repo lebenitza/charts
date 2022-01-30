@@ -8,7 +8,7 @@ Return the appropriate apiVersion for cronjob APIs.
 {{- print "batch/v2alpha1" }}
 {{- else if semverCompare "1.8-0 - 1.20" .Capabilities.KubeVersion.GitVersion -}}
 {{- print "batch/v1beta1" }}
-{{- else if semverCompare ">= 1.21" .Capabilities.KubeVersion.GitVersion -}}
+{{- else -}}
 {{- print "batch/v1" }}
 {{- end -}}
 {{- end -}}
