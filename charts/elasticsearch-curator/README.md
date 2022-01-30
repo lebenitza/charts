@@ -20,7 +20,8 @@ This chart will do the following:
 To install the chart, use the following:
 
 ```console
-$ helm install stable/elasticsearch-curator
+$ helm repo add lebenitza https://lebenitza.github.io/charts
+$ helm install elasticsearch-curator lebenitza/elasticsearch-curator
 ```
 
 ## Upgrading an existing Release to a new major version
