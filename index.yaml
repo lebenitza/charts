@@ -3,6 +3,25 @@ entries:
   elasticsearch-curator:
   - apiVersion: v2
     appVersion: 5.8.4
+    created: "2022-05-03T19:31:54.427958131Z"
+    description: A Helm chart for Elasticsearch Curator
+    digest: fee662db9c3e476e64407afc5677753a47a050e63c4543651fe6eb36b22b39f9
+    home: https://github.com/elastic/curator
+    icon: https://helm.elastic.co/icons/elasticsearch.png
+    keywords:
+    - curator
+    - elasticsearch
+    - elasticsearch-curator
+    name: elasticsearch-curator
+    sources:
+    - https://github.com/lebenitza/helm-elasticsearch-curator
+    - https://github.com/bitnami/bitnami-docker-elasticsearch-curator
+    type: application
+    urls:
+    - https://github.com/lebenitza/charts/releases/download/elasticsearch-curator-3.2.2/elasticsearch-curator-3.2.2.tgz
+    version: 3.2.2
+  - apiVersion: v2
+    appVersion: 5.8.4
     created: "2022-05-03T19:28:28.429065188Z"
     description: A Helm chart for Elasticsearch Curator
     digest: 2fc8ecc9622589b4fea6f998607af6de63d68c3c69bcd743c24743963b1dad8d
@@ -156,6 +175,26 @@ entries:
   wiremock:
   - apiVersion: v2
     appVersion: 2.27.2
+    created: "2022-05-03T19:31:54.62262532Z"
+    description: A Helm chart for Wiremock
+    digest: 20829fdeb0da861ea9afa61166ff22976e27ffa05b8c9ca4624be26622fa8494
+    home: http://wiremock.org/
+    icon: http://wiremock.org/images/wiremock-concept-icon-01.png
+    keywords:
+    - wiremock
+    - api-mock
+    - mocking
+    name: wiremock
+    sources:
+    - https://github.com/tomakehurst/wiremock
+    - https://github.com/rodolpheche/wiremock-docker
+    - https://github.com/lebenitza/charts
+    type: application
+    urls:
+    - https://github.com/lebenitza/charts/releases/download/wiremock-0.3.1/wiremock-0.3.1.tgz
+    version: 0.3.1
+  - apiVersion: v2
+    appVersion: 2.27.2
     created: "2021-05-06T09:26:53.205851112Z"
     description: A Helm chart for Wiremock
     digest: e3ba29d3ab6eb32c8e0371fbf557ddb2d133a6fc07aee680b483a33bcfecaa9f
@@ -214,4 +253,4 @@ entries:
     urls:
     - https://github.com/lebenitza/charts/releases/download/wiremock-0.1.0/wiremock-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-03T19:28:28.429098788Z"
+generated: "2022-05-03T19:31:54.62267492Z"
