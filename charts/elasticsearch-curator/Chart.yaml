@@ -3,7 +3,7 @@ name: elasticsearch-curator
 description: A Helm chart for Elasticsearch Curator
 
 type: application
-version: 3.2.0
+version: 3.2.1
 appVersion: "5.8.4"
 
 icon: https://helm.elastic.co/icons/elasticsearch.png

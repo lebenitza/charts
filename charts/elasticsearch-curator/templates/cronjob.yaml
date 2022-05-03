@@ -8,7 +8,7 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
     {{- if .Values.cronjob.labels }}
-    {{ toYaml .Values.cronjob.labels | nindent 4 }}
+    {{- toYaml .Values.cronjob.labels | nindent 4 }}
     {{- end }}
   {{- if .Values.cronjob.annotations }}
   annotations:
@@ -34,7 +34,7 @@ spec:
         app: {{ template "elasticsearch-curator.name" . }}
         release: {{ .Release.Name }}
         {{- if .Values.cronjob.labels }}
-        {{ toYaml .Values.cronjob.labels | nindent 8 }}
+        {{- toYaml .Values.cronjob.labels | nindent 8 }}
         {{- end }}
     spec:
       template:
