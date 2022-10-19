@@ -94,8 +94,8 @@ spec:
               {{- else }}
               args: [ "--config", "/etc/es-curator/config.yml", "/etc/es-curator/action_file.yml" ]
               {{- end }}
+              {{- if or .Values.envFromSecrets .Values.env }}
               env:
-              {{- if .Values.envFromSecrets }}
                 {{- range $key,$value := .Values.envFromSecrets }}
                 - name: {{ $key | upper | quote}}
                   valueFrom:
@@ -103,13 +103,10 @@ spec:
                       name: {{ $value.from.secret | quote}}
                       key: {{ $value.from.key | quote}}
                 {{- end }}
-              {{- else if .Values.env }}
                 {{- range $key,$value := .Values.env }}
                 - name: {{ $key | upper | quote}}
                   value: {{ $value | quote}}
                 {{- end }}
-              {{- else }}
-                []  
               {{- end }}
               resources:
                 {{- toYaml .Values.resources | nindent 16 }}
