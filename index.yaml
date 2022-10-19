@@ -3,6 +3,25 @@ entries:
   elasticsearch-curator:
   - apiVersion: v2
     appVersion: 5.8.4
+    created: "2022-10-19T09:53:20.384605716Z"
+    description: A Helm chart for Elasticsearch Curator
+    digest: ac512e36915211716315c2645a0ed7d29ae34b4b6b6139c6e4768ad3355e0e0b
+    home: https://github.com/elastic/curator
+    icon: https://helm.elastic.co/icons/elasticsearch.png
+    keywords:
+    - curator
+    - elasticsearch
+    - elasticsearch-curator
+    name: elasticsearch-curator
+    sources:
+    - https://github.com/lebenitza/helm-elasticsearch-curator
+    - https://github.com/bitnami/bitnami-docker-elasticsearch-curator
+    type: application
+    urls:
+    - https://github.com/lebenitza/charts/releases/download/elasticsearch-curator-3.2.3/elasticsearch-curator-3.2.3.tgz
+    version: 3.2.3
+  - apiVersion: v2
+    appVersion: 5.8.4
     created: "2022-05-03T19:31:54.427958131Z"
     description: A Helm chart for Elasticsearch Curator
     digest: fee662db9c3e476e64407afc5677753a47a050e63c4543651fe6eb36b22b39f9
@@ -253,4 +272,4 @@ entries:
     urls:
     - https://github.com/lebenitza/charts/releases/download/wiremock-0.1.0/wiremock-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-03T19:31:54.62267492Z"
+generated: "2022-10-19T09:53:20.384860216Z"
