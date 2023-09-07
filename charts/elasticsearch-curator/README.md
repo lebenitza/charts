@@ -32,6 +32,8 @@ incompatible breaking change needing manual actions.
 ### To 3.0.0
 
 v3.0.0 uses docker image from `bitnami/elasticsearch-curator`.
+can use also https://github.com/flant/curator-opensearch
+
 
 `command` value should be `curator`
 
@@ -59,7 +61,8 @@ their default values.
 | `cronjob.failedJobsHistoryLimit`     | Specify the number of failed Jobs to keep                   | `nil`                                        |
 | `cronjob.successfulJobsHistoryLimit` | Specify the number of completed Jobs to keep                | `nil`                                        |
 | `cronjob.jobRestartPolicy`           | Control the Job restartPolicy                               | `Never`                                      |
-| `cronjob.startingDeadlineSeconds`    | Amount of time to try reschedule job if we can't run on time| `nil`                                         |
+| `cronjob.startingDeadlineSeconds`    | Amount of time to try reschedule job if we can't run on time| `nil`                                        |
+| `cronjob.backoffLimit`               | Limit backoffLimit                                          | 0                                            |
 | `pod.annotations`                    | Annotations to add to the pod                               | {}                                           |
 | `pod.labels`                         | Labels to add to the pod                                    | {}                                           |
 | `dryrun`                             | Run Curator in dry-run mode                                 | `false`                                      |

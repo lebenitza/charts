@@ -37,6 +37,10 @@ spec:
         {{- toYaml .Values.cronjob.labels | nindent 8 }}
         {{- end }}
     spec:
+      {{ if or ( .Values.cronjob.backoffLimit) (eq (toString  .Values.cronjob.backoffLimit) "0") }}
+      backoffLimit: {{  .Values.cronjob.backoffLimit }}
+      {{- end }}
+
       template:
         metadata:
           labels:
