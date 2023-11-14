@@ -28,6 +28,9 @@ spec:
   {{- with .Values.cronjob.startingDeadlineSeconds }}
   startingDeadlineSeconds: {{ . }}
   {{- end }}
+  {{ with .Values.cronjob.backoffLimit }}
+  backoffLimit: {{ . }}
+  {{- end }}
   jobTemplate:
     metadata:
       labels:
