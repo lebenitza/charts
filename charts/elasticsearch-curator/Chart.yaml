@@ -3,7 +3,7 @@ name: elasticsearch-curator
 description: A Helm chart for Elasticsearch Curator
 
 type: application
-version: 3.2.3
+version: 3.2.4
 appVersion: "5.8.4"
 
 icon: https://helm.elastic.co/icons/elasticsearch.png
@@ -13,6 +13,7 @@ keywords:
 - curator
 - elasticsearch
 - elasticsearch-curator
+- opensreach-curator
 sources:
 - https://github.com/lebenitza/helm-elasticsearch-curator
 - https://github.com/bitnami/bitnami-docker-elasticsearch-curator
